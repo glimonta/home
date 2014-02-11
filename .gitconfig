@@ -1,0 +1,22 @@
+[user]
+	name = Gabriela Limonta 
+	email = glimonta@gmail.com
+[github]
+	user = glimonta
+	token = 
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[alias]
+	vimdiff = difftool -y -t vimdiff
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[core]
+	editor = vim
+	excludesfile = ~/.cvsignore
+[color]
+	diff = auto
+	status = auto
+	branch = auto
