@@ -115,7 +115,7 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
@@ -236,3 +236,6 @@ let g:syntastic_cpp_compiler_options = ' -std=gnu++11'
 
 NeoBundle 'LaTeX-Suite-aka-Vim-LaTeX'
 let g:Tex_ViewRule_pdf = 'evince'
+
+
+call neobundle#end()
