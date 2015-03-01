@@ -15,7 +15,7 @@ fi
 
 if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null
 then
-	PS1="(\$?) ${debian_chroot:+($debian_chroot)}\[\e[01;32m\]\u@\h\[\e[00m\]:\[\e[01;34m\]\w\[\e[00m\]\$ "
+	PS1="\e[01;32m(\e[m\$?\e[01;32m)\e[m ${debian_chroot:+($debian_chroot)}\[\e[01;35m\]\u@\h\[\e[00m\]:\[\e[01;32m\]\w\[\e[00m\]\$ "
 else
         PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w\$ "
 fi
