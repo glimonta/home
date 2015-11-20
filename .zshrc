@@ -1,313 +1,85 @@
-# Path to your oh-my-zsh configuration.
-ZSH="${HOME}/.oh-my-zsh"
-DEFAULT_USER='gabriela'
-DISABLE_AUTO_TITLE='false'
-COMPLETION_WAITING_DOTS='true'
-DISABLE_UNTRACKED_FILES_DIRTY='false' # This makes Git faster but it can’t notice untracked files well.
-HIST_STAMPS='yyyy-mm-dd'
+# Path to your oh-my-zsh installation.
+export ZSH=/home/gabriela/.oh-my-zsh
 
-plugins=(
-  cabal
-  catimg
-  colored-man
-  colorize
-  common-aliases
-  compleat
-  dircycle
-  git
-  git-extras
-  nyan
-  perl
-  pep8
-  pip
-  pyenv
-  pylint
-  python
-  rails
-  rvm
-  screen
-  sprunge
-  tmux
-  urltools
-)
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="ys"
 
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
-# DISABLE_AUTO_UPDATE='true'
 
-source "${ZSH}/oh-my-zsh.sh"
-source "${HOME}/.zshtheme"
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
 
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
 
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
 
-# zsh options
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
 
-# Changing directories
-  setopt AUTO_CD
-unsetopt AUTO_PUSHD
-unsetopt CDABLE_VARS
-  setopt CHASE_DOTS
-  setopt CHASE_LINKS
-unsetopt POSIX_CD
-unsetopt PUSHD_IGNORE_DUPS
-unsetopt PUSHD_MINUS
-#unsetopt PUSHD_SILENT
-unsetopt PUSHD_TO_HOME
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Completion
-  setopt ALWAYS_LAST_PROMPT
-unsetopt ALWAYS_TO_END
-  setopt AUTO_LIST
-  setopt AUTO_MENU
-  setopt AUTO_NAME_DIRS
-unsetopt AUTO_PARAM_KEYS
-  setopt AUTO_PARAM_SLASH
-unsetopt AUTO_REMOVE_SLASH
-unsetopt BASH_AUTO_LIST
-unsetopt COMPLETE_ALIASES
-  setopt COMPLETE_IN_WORD
-  setopt GLOB_COMPLETE
-  setopt HASH_LIST_ALL
-  setopt LIST_AMBIGUOUS
-unsetopt LIST_BEEP
-unsetopt LIST_PACKED
-unsetopt LIST_ROWS_FIRST
-  setopt LIST_TYPES
-unsetopt MENU_COMPLETE
-unsetopt REC_EXACT
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
 
-# Expansion and globbing
-  setopt BAD_PATTERN
-  setopt BARE_GLOB_QUAL
-  setopt BRACE_CCL
-  setopt CASE_GLOB
-  setopt CASE_MATCH
-unsetopt CSH_NULL_GLOB
-  setopt EQUALS
-  setopt EXTENDED_GLOB
-  setopt GLOB
-unsetopt GLOB_ASSIGN
-unsetopt GLOB_DOTS
-unsetopt GLOB_SUBST
-  setopt HIST_SUBST_PATTERN
-unsetopt IGNORE_BRACES
-unsetopt IGNORE_CLOSE_BRACES
-unsetopt KSH_GLOB
-unsetopt MAGIC_EQUAL_SUBST
-unsetopt MARK_DIRS
-  setopt MULTIBYTE
-  setopt NOMATCH
-unsetopt NULL_GLOB
-unsetopt NUMERIC_GLOB_SORT
-  setopt RC_EXPAND_PARAM
-  setopt REMATCH_PCRE
-unsetopt SH_GLOB
-  setopt UNSET # :( this should really be set, but it breaks stuff
-unsetopt WARN_CREATE_GLOBAL # :( this should really be set, but it breaks stuff
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
 
-# History
-  setopt APPEND_HISTORY
-  setopt BANG_HIST
-  setopt EXTENDED_HISTORY
-# HIST_ALLOW_CLOBBER
-  setopt HIST_BEEP
-  setopt HIST_EXPIRE_DUPS_FIRST
-  setopt HIST_FCNTL_LOCK
-  setopt HIST_FIND_NO_DUPS
-  setopt HIST_IGNORE_ALL_DUPS
-  setopt HIST_IGNORE_DUPS
-  setopt HIST_IGNORE_SPACE
-  setopt HIST_LEX_WORDS
-unsetopt HIST_NO_FUNCTIONS
-unsetopt HIST_NO_STORE
-  setopt HIST_REDUCE_BLANKS
-  setopt HIST_SAVE_BY_COPY
-  setopt HIST_SAVE_NO_DUPS
-  setopt HIST_VERIFY
-  setopt INC_APPEND_HISTORY
-  setopt SHARE_HISTORY
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git)
 
-# Initialisation
-unsetopt ALL_EXPORT
-  setopt GLOBAL_EXPORT
-  setopt GLOBAL_RCS
-  setopt RCS
+# User configuration
 
-# Input/output
-  setopt ALIASES
-unsetopt CLOBBER
-  setopt CORRECT
-unsetopt CORRECT_ALL
-unsetopt DVORAK
-unsetopt FLOW_CONTROL
-unsetopt IGNORE_EOF
-  setopt INTERACTIVE_COMMENTS
-unsetopt HASH_CMDS
-unsetopt HASH_DIRS
-unsetopt HASH_EXECUTABLES_ONLY
-  setopt MAIL_WARNING
-  setopt PATH_DIRS
-# PATH_SCRIPT
-# PRINT_EIGHT_BIT
-unsetopt PRINT_EXIT_VALUE
-  setopt RC_QUOTES
-unsetopt RM_STAR_SILENT
-  setopt RM_STAR_WAIT
-  setopt SHORT_LOOPS
-unsetopt SUN_KEYBOARD_HACK
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/bison/bin/"
 
-# Job Control
-  setopt AUTO_CONTINUE
-unsetopt AUTO_RESUME
-unsetopt BG_NICE
-  setopt CHECK_JOBS
-unsetopt HUP
-  setopt LONG_LIST_JOBS
-  setopt MONITOR
-  setopt NOTIFY
-# POSIX_JOBS
+# export MANPATH="/usr/local/man:$MANPATH"
 
-# Prompting
-  setopt PROMPT_BANG
-  setopt PROMPT_CR
-  setopt PROMPT_SP
-  setopt PROMPT_PERCENT
-  setopt PROMPT_SUBST
-  setopt TRANSIENT_RPROMPT
+source $ZSH/oh-my-zsh.sh
 
-# Scripts and Functions
-  setopt C_BASES
-# C_PRECEDENCES
-# DEBUG_BEFORE_CMD
-unsetopt ERR_EXIT
-unsetopt ERR_RETURN
-  setopt EVAL_LINENO
-  setopt EXEC
-  setopt FUNCTION_ARGZERO
-unsetopt LOCAL_OPTIONS # hmm…
-unsetopt LOCAL_TRAPS # hmm…
-  setopt MULTI_FUNC_DEF
-# MULTIOS
-  setopt OCTAL_ZEROES
-unsetopt SOURCE_TRACE
-unsetopt TYPESET_SILENT
-unsetopt VERBOSE
-unsetopt XTRACE
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
 
-# Shell emulation
-unsetopt BASH_REMATCH
-unsetopt BSD_ECHO
-#unsetopt CONTINUE_ON_ERROR
-unsetopt CSH_JUNKIE_HISTORY
-unsetopt CSH_JUNKIE_LOOPS
-unsetopt CSH_JUNKIE_QUOTES
-# CSH_NULLCMD
-unsetopt KSH_ARRAYS
-unsetopt KSH_AUTOLOAD
-unsetopt KSH_OPTION_PRINT
-unsetopt KSH_TYPESET
-unsetopt KSH_ZERO_SUBSCRIPT
-unsetopt POSIX_ALIASES
-# POSIX_BUILTINS
-unsetopt POSIX_IDENTIFIERS
-unsetopt POSIX_STRINGS
-unsetopt POSIX_TRAPS
-unsetopt SH_FILE_EXPANSION
-# SH_NULLCMD
-unsetopt SH_OPTION_LETTERS
-unsetopt SH_WORD_SPLIT
-  setopt TRAPS_ASYNC
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
 
-# Zle
-  setopt BEEP
-  setopt COMBINING_CHARS
-  setopt EMACS
-unsetopt OVERSTRIKE
-unsetopt SINGLE_LINE_ZLE
-unsetopt VI
-  setopt ZLE
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
 
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-
-# History searching with PageUp/Down
-
-autoload -U up-line-or-beginning-search
-autoload -U down-line-or-beginning-search
-zle -N up-line-or-beginning-search
-zle -N down-line-or-beginning-search
-[[ -n "${key[PageUp]}"   ]] && bindkey "${key[PageUp]}"   up-line-or-beginning-search
-[[ -n "${key[PageDown]}" ]] && bindkey "${key[PageDown]}" down-line-or-beginning-search
-
-
-
-# TODO: manpath
-
-# User executable and library paths
-bin_new_paths=(); function bin_add_path() { [[ -d $1 ]] && bin_new_paths+=($1); }
-lib_new_paths=(); function lib_add_path() { [[ -d $1 ]] && lib_new_paths+=($1); }
-inc_new_paths=(); function inc_add_path() { [[ -d $1 ]] && inc_new_paths+=($1); }
-inf_new_paths=(); function inf_add_path() { [[ -d $1 ]] && inf_new_paths+=($1); }
-man_new_paths=(); function man_add_path() { [[ -d $1 ]] && man_new_paths+=($1); }
-
-# Executable paths
-bin_add_path "${HOME}/bin"
-bin_add_path "${HOME}/stuff/commands"
-bin_add_path "${HOME}/.cabal/bin"
-bin_add_path "${HOME}/.opt/github/hub/bin"
-bin_add_path "${HOME}/.opt/haskell_platform/2013.2.0.0/bin"
-bin_add_path "${HOME}/.opt/ghc/7.6.3/bin"
-bin_add_path "${HOME}/.opt/texlive/2013/bin/i386-linux"
-bin_add_path "${HOME}/.opt/TogglDesktop"
-#bin_add_path "${HOME}/.opt/postgresql/9.2.4/bin"
-#bin_add_path "${HOME}/.opt/vim/7.3/bin"
-#bin_add_path "${HOME}/.opt/gcc/bin"
-#bin_add_path "${HOME}/perl5/perlbrew/bin"
-
-# Library paths
-#lib_add_path "${HOME}/.opt/postgresql/9.2.4/lib"
-#lib_add_path "${HOME}/.opt/gcc/lib"
-#lib_add_path "${HOME}/.opt/gcc/lib64"
-
-# Include paths — shouldn’t this be handled by pkg-config?
-#inc_add_path "${HOME}/.opt/postgresql/9.2.4/include"
-
-# GNU texinfo paths
-inf_add_path "${HOME}/.opt/texlive/2013/texmf-dist/doc/info"
-
-# Manual paths
-man_add_path "${HOME}/.opt/texlive/2013/texmf-dist/doc/man"
-
-export            PATH="$(IFS=':'; printf '%s' "${bin_new_paths[*]}"):${PATH}"
-export LD_LIBRARY_PATH="$(IFS=':'; printf '%s' "${lib_new_paths[*]}"):${LD_LIBRARY_PATH}"
-export     LD_RUN_PATH="$(IFS=':'; printf '%s' "${lib_new_paths[*]}"):${LD_RUN_PATH}"
-export  C_INCLUDE_PATH="$(IFS=':'; printf '%s' "${inc_new_paths[*]}"):${C_INCLUDE_PATH}"
-export        INFOPATH="$(IFS=':'; printf '%s' "${inf_new_paths[*]}"):${INFOPATH}"
-export         MANPATH="$(IFS=':'; printf '%s' "${man_new_paths[*]}"):${MANPATH}"
-
-#export LD_LIBRARY_PATH="$(ghc-pkg list --simple-output --global | sed -e 's@ @:@g' -e "s@[^:]\+@$HOME/.cabal/lib/i386-linux-ghc-7.7.20130420/&@g"):$(ghc-pkg list --simple-output --global | sed -e 's@ @:@g' -e 's@[^:]\+@/var/local/manuel/haskell/ghc/HEAD/lib/ghc-7.7.20130420/&@g')"
-
-
-
-# Environment
-
-[[ ${TERM} == xterm ]] && export TERM='xterm-256color'
-export LANG='en_US.UTF-8'
-export LC_ALL='en_US.UTF-8'
-export PAGER='less -S' # TODO: use vim as the pager
-export EDITOR='vim'
-export BC_LINE_LENGTH=0
-#export MPD_HOST='@localhost'
-#export PGDATA="${HOME}/.opt/postgresql/9.2.4/data"
-
-
-
-function v1p() {
-  vim -E \
-    -c 1p               \
-    -c 'echo input("")' \
-    -c q                \
-    "${@}"
-}
-
-
-# OCaml
-. /home/gabriela/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"

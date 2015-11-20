@@ -61,7 +61,7 @@ runtime ftplugin/man.vim
 set background=dark
 set cryptmethod=blowfish
 set expandtab
-set history=32768
+"set history=32768
 set hls
 set incsearch
 set mouse=a
@@ -121,7 +121,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 
 
-NeoBundle 'Shougo/vimproc', {
+NeoBundle 'Shougo/vimproc.vim', {
       \ 'build' : {
       \     'windows' : 'make -f make_mingw32.mak',
       \     'cygwin' : 'make -f make_cygwin.mak',
